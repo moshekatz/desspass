@@ -6,21 +6,13 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  TwitterIcon,
-  InstagramIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from '@/components/SocialIcons'
+import { InstagramIcon } from '@/components/SocialIcons'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoRihutim from '@/images/logos/rihutim.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -99,10 +91,11 @@ function Article({ article }) {
   )
 }
 
-function SocialLink({ icon: Icon, ...props }) {
+function SocialLink({ icon: Icon, children, ...props }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link className="group -m-1 p-1 flex flex-row gap-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <span className="text-zinc-500 transition group-hover:text-zinc-600 dark:text-zinc-400 dark:group-hover:text-zinc-300">{children}</span>
     </Link>
   )
 }
@@ -139,36 +132,13 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
-    },
+      company: 'Rihutim',
+      href: 'https://rihutim.com',
+      title: 'Styling, sketching & sales',
+      logo: logoRihutim,
+      start: '2021',
+      end: '2023',
+    }
   ]
 
   return (
@@ -186,7 +156,7 @@ function Resume() {
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
+                {role.href ? <a href={role.href} target="_blank" rel="noreferrer">{role.company}</a> : role.company}
               </dd>
               <dt className="sr-only">Role</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -255,38 +225,30 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Linoy, an interior design graduate based in Tel Aviv."
+          content="I’m Linoy, an interior designer based in Tel Aviv."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Interior design graduate. Obsessed over details. Passionate to create.
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+            Interior designer.
           </h1>
+          <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+            Obsessed over details. Passionate to create.
+          </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I’m Linoy, an interior design graduate based in Tel Aviv.
+          I’m Linoy, an interior designer based in Tel Aviv.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/desspass_"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+            >
+              Follow on Instagram
+            </SocialLink>
           </div>
         </div>
       </Container>
@@ -299,7 +261,7 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>

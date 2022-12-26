@@ -4,12 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  TwitterIcon,
-  InstagramIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from '@/components/SocialIcons'
+import { InstagramIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 import { Button } from '@/components/Button'
 
@@ -21,8 +16,6 @@ const copies = {
     'In the last few years, design became the center of my world, and I knew I needed to level up - so I joined Betzalel.',
     'During my time there, I acquired a wide range of skills, both theoretical and practical, that I showcase in my portfolio.',
     'While working on projects, I pushed myself to construct a unique style, always working backwards from the desired experience.',
-    // eslint-disable-next-line react/jsx-key
-    <mark><b>TODO:</b> rihutim</mark>,
     'I’m looking forward to delight customers, level up my design skillset and surround myself with exceptional team.'
   ]
 };
@@ -32,6 +25,8 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
@@ -81,6 +76,11 @@ export default function About() {
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               {copies.paragraphs.map((content, i) => <p key={i}>{content}</p>)}
             </div>
+            <h2 className="mt-6 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">Services I provide</h2>
+            <ul className="mt-3 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+              <li>Home styling</li>
+              <li>SketchUp & AutoCAD modeling</li>
+            </ul>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
@@ -95,7 +95,7 @@ export default function About() {
                 dess.pass.la@gmail.com
               </SocialLink>
             </ul>
-            <Button href="#" variant="secondary" className="group mt-6 w-full">
+            <Button download href="/files/linoy-avraham-resume.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
               Download CV
               <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
