@@ -85,7 +85,7 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink href="https://www.instagram.com/desspass_" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
+                Follow me on Instagram
               </SocialLink>
               <SocialLink
                 href="mailto:dess.pass.la@gmail.com"
