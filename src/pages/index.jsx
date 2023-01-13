@@ -237,7 +237,7 @@ export default function Home({ articles }) {
             Obsessed over details. Passionate to create.
           </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I’m Linoy, an interior designer based in Tel Aviv.
+          I’m Linoy Avraham, an interior designer based in Tel Aviv.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
