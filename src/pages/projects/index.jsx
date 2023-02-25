@@ -5,19 +5,29 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import coverTheUrbanJungle from './the-urban-jungle/cover.webp'
 import coverArtOfCeramics from './art-of-ceramics/cover.webp'
+import coverBathroomRenovation from './bathroom-renovation/cover.webp'
 
 const projects = [
   {
     name: 'The Urban Jungle',
-    description: 'Final project - Atarim Square',
+    description: 'Final project',
     link: { href: '/projects/the-urban-jungle' },
-    logo: coverTheUrbanJungle
+    logo: coverTheUrbanJungle,
+    location: 'Tel Aviv'
   },
   {
     name: 'Art of Ceramics',
-    description: 'Commercial spaces - Shlush 19, Neve Tzedek',
+    description: 'Commercial spaces',
     link: { href: '/projects/art-of-ceramics' },
-    logo: coverArtOfCeramics
+    logo: coverArtOfCeramics,
+    location: 'Tel Aviv'
+  },
+  {
+    name: 'Bathroom renovation',
+    description: 'Superposition programs',
+    link: { href: '/projects/bathroom-renovation' },
+    logo: coverBathroomRenovation,
+    location: 'Holon'
   }
 ]
 
@@ -54,6 +64,7 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              <Card.Description>📍 {project.location}</Card.Description>
             </Card>
           ))}
         </ul>
