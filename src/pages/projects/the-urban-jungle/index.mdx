@@ -1,4 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SideBySideLayout } from '@/components/SideBySideLayout';
+import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
 import Image from 'next/image'
 import Link from 'next/link'
 import intro from './intro.webp'
@@ -46,12 +48,14 @@ My motivation for this project was to have Atarim Square as an extenstion for Be
 
 I first searched for existing positive spots and the pleasant places, and the journey between them.
 
-<Image src={final1} alt="Final project 1"/>
-<Image src={final2} alt="Final project 2"/>
-<Image src={final3} alt="Final project 3"/>
-<Image src={final4} alt="Final project 4"/>
-<Image src={final5} alt="Final project 5"/>
-<Image src={final6} alt="Final project 6"/>
+<SideBySideLayout>
+  <Image src={final1} alt="Final project 1"/>
+  <Image src={final2} alt="Final project 2"/>
+  <Image src={final3} alt="Final project 3"/>
+  <Image src={final4} alt="Final project 4"/>
+  <Image src={final5} alt="Final project 5"/>
+  <Image src={final6} alt="Final project 6"/>
+</SideBySideLayout>
 
 Back in Holon where I grew up, I had my own personal jungle - A place where I could get a breath of fresh air, observe vibrant green colors around me and just chill out (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6379348/#:~:text=Study%201%20revealed%20that%20walking,green%20on%20the%20human%20organism." target="_blank">Did you know the green color has a calming and relaxing effect on the human organism?</a>).
 
@@ -69,8 +73,10 @@ The design will support additional activities and exhibitions focused around sus
 
 The existing structure has a lot of potential, and it played a key role in enabling the evolution of the square.
 
-<Image src={existingVsPlanned4} alt="Existing vs. Planned 4"/>
-<Image src={existingVsPlanned5} alt="Existing vs. Planned 5"/>
+<SideBySideLayout>
+  <Image src={existingVsPlanned4} alt="Existing vs. Planned 4" style={{ width: '90%' }}/>
+  <Image src={existingVsPlanned5} alt="Existing vs. Planned 5" style={{ height: '100%' }}/>
+</SideBySideLayout>
 <Image src={existingVsPlanned1} alt="Existing vs. Planned 1"/>
 <Image src={existingVsPlanned2} alt="Existing vs. Planned 2"/>
 <Image src={existingVsPlanned3} alt="Existing vs. Planned 3"/>
