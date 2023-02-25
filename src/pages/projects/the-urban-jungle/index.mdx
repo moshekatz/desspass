@@ -1,4 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SideBySideLayout } from '@/components/SideBySideLayout';
+import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
 import Image from 'next/image'
 import Link from 'next/link'
 import intro from './intro.webp'
@@ -9,12 +11,19 @@ import concept1 from './concept-1.webp'
 import existingVsPlanned1 from './existing-vs-planned-1.webp';
 import existingVsPlanned2 from './existing-vs-planned-2.webp';
 import existingVsPlanned3 from './existing-vs-planned-3.webp';
+import existingVsPlanned4 from './existing-vs-planned-4.webp';
+import existingVsPlanned5 from './existing-vs-planned-5.webp';
 import final1 from './final-1.webp';
 import final2 from './final-2.webp';
 import final3 from './final-3.webp';
 import final4 from './final-4.webp';
 import final5 from './final-5.webp';
 import final6 from './final-6.webp';
+import illustration1 from './illustration-1.webp';
+import illustration2 from './illustration-2.webp';
+import illustration3 from './illustration-3.webp';
+import illustration4 from './illustration-4.webp';
+import illustration5 from './illustration-5.webp';
 
 export const meta = {
   author: 'Linoy Avraham',
@@ -37,6 +46,17 @@ My motivation for this project was to have Atarim Square as an extenstion for Be
 <Image src={oldBgToAtarim} alt="Ben Gurion boulevard flowing to Atarim square"/>
 <Image src={oldIndependenceGardenToAtarim} alt="Independence garden flowing to Atarim square"/>
 
+I first searched for existing positive spots and the pleasant places, and the journey between them.
+
+<SideBySideLayout>
+  <Image src={final1} alt="Final project 1"/>
+  <Image src={final2} alt="Final project 2"/>
+  <Image src={final3} alt="Final project 3"/>
+  <Image src={final4} alt="Final project 4"/>
+  <Image src={final5} alt="Final project 5"/>
+  <Image src={final6} alt="Final project 6"/>
+</SideBySideLayout>
+
 Back in Holon where I grew up, I had my own personal jungle - A place where I could get a breath of fresh air, observe vibrant green colors around me and just chill out (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6379348/#:~:text=Study%201%20revealed%20that%20walking,green%20on%20the%20human%20organism." target="_blank">Did you know the green color has a calming and relaxing effect on the human organism?</a>).
 
 This memory is what I wanted to bring to Atarim square - an urban jungle you can come to, and maybe even take a bit of it back home.
@@ -53,6 +73,10 @@ The design will support additional activities and exhibitions focused around sus
 
 The existing structure has a lot of potential, and it played a key role in enabling the evolution of the square.
 
+<SideBySideLayout>
+  <Image src={existingVsPlanned4} alt="Existing vs. Planned 4" style={{ width: '90%' }}/>
+  <Image src={existingVsPlanned5} alt="Existing vs. Planned 5" style={{ height: '100%' }}/>
+</SideBySideLayout>
 <Image src={existingVsPlanned1} alt="Existing vs. Planned 1"/>
 <Image src={existingVsPlanned2} alt="Existing vs. Planned 2"/>
 <Image src={existingVsPlanned3} alt="Existing vs. Planned 3"/>
@@ -65,9 +89,8 @@ I'd love you to <Link href="/about">contact me</Link> for feedback or questions.
 
 ---
 
-<Image src={final1} alt="Final project 1"/>
-<Image src={final2} alt="Final project 2"/>
-<Image src={final3} alt="Final project 3"/>
-<Image src={final4} alt="Final project 4"/>
-<Image src={final5} alt="Final project 5"/>
-<Image src={final6} alt="Final project 6"/>
+<Image src={illustration1} alt="Illustration 1"/>
+<Image src={illustration5} alt="Illustration 2"/>
+<Image src={illustration3} alt="Illustration 3"/>
+<Image src={illustration2} alt="Illustration 4"/>
+<Image src={illustration4} alt="Illustration 5"/>

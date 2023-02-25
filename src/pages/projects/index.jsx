@@ -5,21 +5,34 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import coverTheUrbanJungle from './the-urban-jungle/cover.webp'
 import coverArtOfCeramics from './art-of-ceramics/cover.webp'
+import coverBathroomRenovation from './bathroom-renovation/cover.webp'
 
 const projects = [
   {
     name: 'The Urban Jungle',
-    description: 'Final project - Atarim Square',
+    description: 'Final project',
     link: { href: '/projects/the-urban-jungle' },
-    logo: coverTheUrbanJungle
+    logo: coverTheUrbanJungle,
+    location: 'Tel Aviv'
   },
   {
     name: 'Art of Ceramics',
-    description: 'Commercial spaces - Shlush 19, Neve Tzedek',
+    description: 'Commercial spaces',
     link: { href: '/projects/art-of-ceramics' },
-    logo: coverArtOfCeramics
+    logo: coverArtOfCeramics,
+    location: 'Tel Aviv'
+  },
+  {
+    name: 'Bathroom renovation',
+    description: 'Superposition programs',
+    link: { href: '/projects/bathroom-renovation' },
+    logo: coverBathroomRenovation,
+    location: 'Holon'
   }
 ]
+
+const description = 'Projects I’ve made trying to discover my unique style';
+const intro = "I’ve worked on many projects over the years but these are the ones that I’m most proud of. They're all in real spaces, aimed to provide practical and elegant solutions.";
 
 export default function Projects() {
   return (
@@ -28,12 +41,12 @@ export default function Projects() {
         <title>Projects - Linoy Avraham</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content={description}
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title={description}
+        intro={intro}
       >
         <ul
           role="list"
@@ -51,6 +64,7 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              <Card.Description>📍 {project.location}</Card.Description>
             </Card>
           ))}
         </ul>
