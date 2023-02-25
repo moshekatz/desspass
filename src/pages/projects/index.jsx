@@ -4,13 +4,20 @@ import Head from 'next/head'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import coverTheUrbanJungle from './the-urban-jungle/cover.webp'
+import coverArtOfCeramics from './art-of-ceramics/cover.webp'
 
 const projects = [
   {
     name: 'The Urban Jungle',
-    description: 'Atarim square as an urban jungle',
+    description: 'Final project - Atarim Square',
     link: { href: '/projects/the-urban-jungle' },
     logo: coverTheUrbanJungle
+  },
+  {
+    name: 'Art of Ceramics',
+    description: 'Commercial spaces - Shlush 19, Neve Tzedek',
+    link: { href: '/projects/art-of-ceramics' },
+    logo: coverArtOfCeramics
   }
 ]
 
