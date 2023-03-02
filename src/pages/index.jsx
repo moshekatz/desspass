@@ -12,6 +12,7 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import diploma from '@/images/photos/diploma.png'
 import logoRihutim from '@/images/logos/rihutim.svg'
 import logoBezalel from '@/images/logos/bezalel.png'
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -284,17 +285,18 @@ function Education() {
           </li>
         ))}
       </ol>
-      <Button
-        download
-        href="/files/linoy-avraham-bezalel-diploma.pdf"
-        target="_blank"
-        rel="noopener"
-        variant="secondary"
-        className="group mt-6 w-full"
-      >
-        Download Diploma
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      <div className="w-full flex justify-center">
+        <Button
+          download
+          href="/files/linoy-avraham-bezalel-diploma.pdf"
+          target="_blank"
+          rel="noopener"
+          variant="secondary"
+          className="group mt-6 w-1/2"
+        >
+          <Image src={diploma} alt="Bezalel diploma"/>
+        </Button>
+      </div>
     </div>
   )
 }
@@ -362,7 +364,10 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+          Some personal favorites
+        </h2>
+        <div className="mt-9 mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
