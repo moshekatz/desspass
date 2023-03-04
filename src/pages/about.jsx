@@ -77,7 +77,7 @@ export default function About() {
               {copies.paragraphs.map((content, i) => <p key={i}>{content}</p>)}
             </div>
             <h2 className="mt-6 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">Services I provide</h2>
-            <ul className="mt-3 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+            <ul className="list-disc mt-3 ml-4 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
               <li>Home styling</li>
               <li>SketchUp & AutoCAD modeling</li>
             </ul>
