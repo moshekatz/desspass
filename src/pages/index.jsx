@@ -12,7 +12,6 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import diploma from '@/images/photos/diploma.png'
 import logoRihutim from '@/images/logos/rihutim.svg'
 import logoBezalel from '@/images/logos/bezalel.png'
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -285,18 +284,16 @@ function Education() {
           </li>
         ))}
       </ol>
-      <div className="w-full flex justify-center">
-        <Button
-          download
-          href="/files/linoy-avraham-bezalel-diploma.pdf"
-          target="_blank"
-          rel="noopener"
-          variant="secondary"
-          className="group mt-6 w-1/2"
-        >
-          <Image src={diploma} alt="Bezalel diploma"/>
-        </Button>
-      </div>
+      <Button
+        download
+        href="/files/linoy-avraham-bezalel-diploma.pdf"
+        target="_blank"
+        rel="noopener"
+        variant="secondary"
+        className="group mt-6 w-full" 
+      >
+        Download Diploma
+      </Button>
     </div>
   )
 }
