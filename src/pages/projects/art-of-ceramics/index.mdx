@@ -1,4 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SideBySideLayout } from '@/components/SideBySideLayout';
 import Image from 'next/image'
 import Link from 'next/link'
 import intro from './intro.jpeg'
@@ -7,6 +8,17 @@ import shlush1 from './shlush-1.webp'
 import shlushFront from './shlush-front.webp'
 import shlushBack from './shlush-back.webp'
 import masterPlan from './master-plan.webp'
+import lightPlan1 from './light-plan-01.webp'
+import lightPlan2 from './light-plan-02.webp'
+import carpentryPlan1 from './carpentry-plan-01.webp'
+import carpentryPlan2 from './carpentry-plan-02.webp'
+import layoutPlan from './layout-plan.webp'
+import concrete from './concrete.webp';
+import lightBulbs from './light-bulbs.webp';
+import oven from './oven.webp';
+import stone from './stone.webp';
+import stools from './stools.webp';
+import tap from './tap.webp';
 
 
 export const meta = {
@@ -49,17 +61,24 @@ One of Studio Davka's principals I identified was the respect to the raw materia
 
 In my design, I wanted to emphasis all of the stages clay goes through, from abstract & raw to clean & specific. The lifecycle of the creation will be present in various places throughout the proposed studio.
 
-### Master Plan
-
 <Image src={masterPlan} alt="Master plan" />
 
-### Next
+Below you'll find the rest of the plans and visuals, **hope you enjoyed art of ceramics!**
 
+## Plans
 
-**Hope you enjoyed art of ceramics!**
+<Image src={lightPlan1} alt="Light plan 1"/>
+<Image src={lightPlan2} alt="Light plan 2"/>
+<Image src={carpentryPlan1} alt="Carpentry plan 1"/>
+<Image src={carpentryPlan2} alt="Carpentry plan 2"/>
+<Image src={layoutPlan} alt="Layout plan"/>
 
-Todo
+## Look and feel
 
----
-
-Todo
+<Image src={lightBulbs} alt="Light bulbs"/>
+<SideBySideLayout>
+  <Image src={oven} alt="Oven"/>
+  <Image src={stone} alt="Stone"/>
+  <Image src={stools} alt="Stools"/>
+  <Image src={tap} alt="Tap"/>
+</SideBySideLayout>

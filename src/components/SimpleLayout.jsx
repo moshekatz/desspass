@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 
-export function SimpleLayout({ title, intro, children }) {
+export function SimpleLayout({ title, intro, helpText, children }) {
   return (
     <Container className="mt-16 sm:mt-32">
       <header className="max-w-2xl">
@@ -10,6 +10,9 @@ export function SimpleLayout({ title, intro, children }) {
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           {intro}
         </p>
+        {helpText && <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          {helpText}  
+        </p>}
       </header>
       <div className="mt-16 sm:mt-20">{children}</div>
     </Container>
