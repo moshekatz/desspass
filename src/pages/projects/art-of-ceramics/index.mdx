@@ -1,12 +1,27 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import { SideBySideLayout } from '@/components/SideBySideLayout';
+import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
 import Image from 'next/image'
 import Link from 'next/link'
 import intro from './intro.jpeg'
 import studioDavka1 from './studio-davka-1.jpeg'
 import shlush1 from './shlush-1.webp'
-import shlushFront from './shlush-front.webp'
-import shlushBack from './shlush-back.webp'
+import shlushFrontAndBack from './shlush-front-and-back.webp'
 import masterPlan from './master-plan.webp'
+import lightPlan from './light-plan.webp'
+import carpentryPlan1 from './carpentry-plan-01.webp'
+import carpentryPlan2 from './carpentry-plan-02.webp'
+import layoutPlan from './layout-plan.webp'
+import concrete from './concrete.webp';
+import lightBulbs from './light-bulbs.webp';
+import naturalLight from './natural-light.webp';
+import oven from './oven.webp';
+import stone from './stone.webp';
+import stools from './stools.webp';
+import tap from './tap.webp';
+import myExperience1 from './my-experience-01.webp'
+import myExperience2 from './my-experience-02.webp'
+import myExperience3 from './my-experience-03.webp'
 
 
 export const meta = {
@@ -40,8 +55,7 @@ I wanted to use those height differences to give the creators and the craft the 
 
 This is how my first drafts looked like:
 
-<Image src={shlushFront} alt="Shlush front" />
-<Image src={shlushBack} alt="Shlush back" />
+<Image src={shlushFrontAndBack} alt="Shlush front and back" />
 
 ## Concept & detailed design
 
@@ -49,17 +63,32 @@ One of Studio Davka's principals I identified was the respect to the raw materia
 
 In my design, I wanted to emphasis all of the stages clay goes through, from abstract & raw to clean & specific. The lifecycle of the creation will be present in various places throughout the proposed studio.
 
-### Master Plan
-
 <Image src={masterPlan} alt="Master plan" />
 
-### Next
+Below you'll find the rest of the plans and visuals, **hope you enjoyed art of ceramics!**
 
+## Plans
 
-**Hope you enjoyed art of ceramics!**
+<Image src={lightPlan} alt="Light plan"/>
+<Image src={carpentryPlan1} alt="Carpentry plan 1"/>
+<Image src={carpentryPlan2} alt="Carpentry plan 2"/>
+<Image src={layoutPlan} alt="Layout plan"/>
 
-Todo
+## Look and feel
 
----
+<SideBySideLayout>
+  <Image src={oven} alt="Oven"/>
+  <Image src={tap} alt="Tap"/>
+  <Image src={lightBulbs} alt="Light bulbs"/>
+  <Image src={naturalLight} alt="Natural light"/>
+  <Image src={stools} alt="Stools"/>
+  <Image src={stone} alt="Stone"/>
+</SideBySideLayout>
 
-Todo
+## My experience
+
+<ThreeColumnLayout>
+  <Image src={myExperience1} alt="My experience 1"/>
+  <Image src={myExperience2} alt="My experience 2"/>
+  <Image src={myExperience3} alt="My experience 3"/>
+</ThreeColumnLayout>

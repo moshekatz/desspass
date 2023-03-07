@@ -5,7 +5,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { InstagramIcon } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import avatarImage from '@/images/avatar.jpg'
 import { Button } from '@/components/Button'
 
 const copies = {
@@ -62,7 +62,7 @@ export default function About() {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
-                src={portraitImage}
+                src={avatarImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -77,7 +77,7 @@ export default function About() {
               {copies.paragraphs.map((content, i) => <p key={i}>{content}</p>)}
             </div>
             <h2 className="mt-6 text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">Services I provide</h2>
-            <ul className="mt-3 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+            <ul className="list-disc mt-3 ml-4 space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
               <li>Home styling</li>
               <li>SketchUp & AutoCAD modeling</li>
             </ul>
