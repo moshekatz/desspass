@@ -1,5 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { SideBySideLayout } from '@/components/SideBySideLayout';
+import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
 import Image from 'next/image'
 import Link from 'next/link'
 import intro from './intro.jpeg'
@@ -18,6 +19,9 @@ import oven from './oven.webp';
 import stone from './stone.webp';
 import stools from './stools.webp';
 import tap from './tap.webp';
+import myExperience1 from './my-experience-01.webp'
+import myExperience2 from './my-experience-02.webp'
+import myExperience3 from './my-experience-03.webp'
 
 
 export const meta = {
@@ -80,3 +84,11 @@ Below you'll find the rest of the plans and visuals, **hope you enjoyed art of c
   <Image src={stools} alt="Stools"/>
   <Image src={stone} alt="Stone"/>
 </SideBySideLayout>
+
+## My experience
+
+<ThreeColumnLayout>
+  <Image src={myExperience1} alt="My experience 1"/>
+  <Image src={myExperience2} alt="My experience 2"/>
+  <Image src={myExperience3} alt="My experience 3"/>
+</ThreeColumnLayout>
