@@ -4,14 +4,20 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
-import { formatDate } from '@/lib/formatDate'
 import upgradingAWhiteWallCover from './upgrading-a-white-wall/cover.webp'
+import bauhausStyleDesignCover from './bauhaus-style-design/cover.webp'
+
+
+const covers = {
+  'upgrading-a-white-wall': upgradingAWhiteWallCover,
+  'bauhaus-style-design': bauhausStyleDesignCover
+};
 
 function Article({ article }) {
   return (
       <Card as="article" className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="relative z-10 flex shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-          <Image src={upgradingAWhiteWallCover} alt={`Cover photo for ${article.title}`}/>
+          <Image src={covers[article.slug]} alt={`Cover photo for ${article.title}`}/>
         </div>
         <div className="md:col-span-3">
           <Card.Title href={`/articles/${article.slug}`}>
