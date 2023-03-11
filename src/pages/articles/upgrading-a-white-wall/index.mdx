@@ -1,14 +1,16 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
+import cover from './cover.webp';
 import before from './before.webp';
 import inProgress from './in-progress.webp';
 import after from './after.webp';
 
 export const meta = {
   author: 'Linoy Avraham',
-  date: '2022-03-02',
+  date: '2022-03-05',
   title: 'Upgrading a white wall',
   description: 'How to highlight an area with vibrant colors',
+  cover: cover
 };
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
