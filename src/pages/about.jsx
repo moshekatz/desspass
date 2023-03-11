@@ -12,9 +12,9 @@ const copies = {
   title: 'About - Linoy Avraham',
   heading: 'Hey, I’m Linoy.',
   paragraphs: [
-    'Fine esthetic senses, customer obsession and an affinity for art were always a part of who I am.',
+    'A strong appreciation for aesthetics, customer obsession, and an undeniable affinity for art, have always been part of who I am.',
     'In the last few years, design became the center of my world, and I knew I needed to level up - so I joined Betzalel.',
-    'During my time there, I acquired a wide range of skills, both theoretical and practical, that I showcase in my portfolio.',
+    'During my time there, I acquired a wide range of skills, both theoretical and practical, that I have showcased here in my portfolio.',
     'While working on projects, I pushed myself to construct a unique style, always working backwards from the desired experience.',
     'I’m looking forward to delight customers, level up my design skill set and surround myself with exceptional team.'
   ]
