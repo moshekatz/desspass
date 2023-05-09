@@ -6,11 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 import upgradingAWhiteWallCover from './upgrading-a-white-wall/cover.webp'
 import bauhausStyleDesignCover from './bauhaus-style-design/cover.webp'
+import theListCover from './the-list/cover.webp'
 
 
 const covers = {
   'upgrading-a-white-wall': upgradingAWhiteWallCover,
-  'bauhaus-style-design': bauhausStyleDesignCover
+  'bauhaus-style-design': bauhausStyleDesignCover,
+  'the-list': theListCover
 };
 
 function Article({ article }) {
@@ -52,7 +54,7 @@ export default function ArticlesIndex({ articles }) {
         <iframe style={{ borderRadius: 12 }} className="max-w-3xl -mt-8 mb-16" src="https://open.spotify.com/embed/playlist/0JoDPg3BRJy8DWOeMCvwwo?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
-            {articles.map((article) => (
+            {articles.sort((a, b) => a.slug === 'the-list' ? -1 : 1).map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>

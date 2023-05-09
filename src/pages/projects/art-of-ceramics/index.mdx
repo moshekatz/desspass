@@ -3,15 +3,16 @@ import { SideBySideLayout } from '@/components/SideBySideLayout';
 import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
 import Image from 'next/image'
 import Link from 'next/link'
-import intro from './intro.jpeg'
-import studioDavka1 from './studio-davka-1.jpeg'
-import shlush1 from './shlush-1.webp'
+import intro1 from './intro1.webp'
+import intro2 from './intro2.webp'
+import studioDavka1 from './studio-davka-1.webp'
+import concept from './concept.webp'
 import shlushFrontAndBack from './shlush-front-and-back.webp'
-import masterPlan from './master-plan.webp'
+import masterPlan1 from './master-plan-1.webp'
 import lightPlan from './light-plan.webp'
 import carpentryPlan1 from './carpentry-plan-01.webp'
 import carpentryPlan2 from './carpentry-plan-02.webp'
-import layoutPlan from './layout-plan.webp'
+import bathroom from './bathroom.webp'
 import concrete from './concrete.webp';
 import lightBulbs from './light-bulbs.webp';
 import naturalLight from './natural-light.webp';
@@ -36,7 +37,10 @@ This project refers to the planning and design of commercial spaces with an emph
 
 First, I had to map between the provided space, <b>Shlush 19, Neve Tsedek</b>, and the brand I represent, <b>Studio Davka</b> - let's get familiar with each.
 
-<Image src={intro} alt="Art of Ceramics - cover"/>
+<SideBySideLayout>
+  <Image src={intro1} alt="Neve Tsedek" />
+  <Image src={intro2} alt="Shlush 19" />
+</SideBySideLayout>
 
 ## Studio Davka
 
@@ -47,7 +51,7 @@ The studio creates functional handcrafted objects to enjoy for everyday use, all
 
 ## Shlush 19, Neve Tsedek
 
-<Image src={shlush1} alt="Illustration of Shlush 19" />
+<Image src={concept} alt="Concept" />
 
 When looking at the connection between the building and the exterior environment, I recognized a potential in the height differences.
 
@@ -63,16 +67,14 @@ One of Studio Davka's principals I identified was the respect to the raw materia
 
 In my design, I wanted to emphasize all of the stages clay goes through, from abstract & raw to clean & specific. The lifecycle of the creation will be present in various places throughout the proposed studio.
 
-<Image src={masterPlan} alt="Master plan" />
+<Image src={masterPlan1} alt="Master plan" />
 
 Below you'll find the rest of the plans and visuals, **hope you enjoyed art of ceramics!**
-
-## Plans
 
 <Image src={lightPlan} alt="Light plan"/>
 <Image src={carpentryPlan1} alt="Carpentry plan 1"/>
 <Image src={carpentryPlan2} alt="Carpentry plan 2"/>
-<Image src={layoutPlan} alt="Layout plan"/>
+<Image src={bathroom} alt="Bathroom"/>
 
 ## Look and feel
 
