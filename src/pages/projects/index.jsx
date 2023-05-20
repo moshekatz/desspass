@@ -6,8 +6,16 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import coverTheUrbanJungle from './the-urban-jungle/cover.webp'
 import coverArtOfCeramics from './art-of-ceramics/cover.webp'
 import coverBathroomRenovation from './bathroom-renovation/cover.webp'
+import coverLivingRoomStyling from './living-room-styling/cover.webp'
 
 const projects = [
+  {
+    name: 'Living Room',
+    description: 'Styling',
+    link: { href: '/projects/living-room-styling' },
+    logo: coverLivingRoomStyling,
+    location: 'Tel Aviv'
+  },
   {
     name: 'The Urban Jungle',
     description: 'Final project',
@@ -23,7 +31,7 @@ const projects = [
     location: 'Tel Aviv'
   },
   {
-    name: 'Bathroom renovation',
+    name: 'Bathroom Renovation',
     description: 'Superposition programs',
     link: { href: '/projects/bathroom-renovation' },
     logo: coverBathroomRenovation,

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import { InstagramIcon } from '@/components/SocialIcons'
+import { InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
 import avatarImage from '@/images/avatar.jpg'
 import { Button } from '@/components/Button'
 
@@ -93,6 +93,13 @@ export default function About() {
                 className="mt-4 border-t border-zinc-100 pt-4 dark:border-zinc-700/40"
               >
                 dess.pass.la@gmail.com
+              </SocialLink>
+              <SocialLink
+                href="https://www.linkedin.com/in/linoy-av/"
+                icon={LinkedInIcon}
+                className="mt-4 border-t border-zinc-100 pt-4 dark:border-zinc-700/40"
+              >
+                Connect with me on Linkedin
               </SocialLink>
             </ul>
             <Button download href="/files/linoy-avraham-resume.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
