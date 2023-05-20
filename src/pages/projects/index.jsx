@@ -10,8 +10,8 @@ import coverLivingRoomStyling from './living-room-styling/cover.webp'
 
 const projects = [
   {
-    name: 'Living Room Styling',
-    description: '???',
+    name: 'Living Room',
+    description: 'Styling',
     link: { href: '/projects/living-room-styling' },
     logo: coverLivingRoomStyling,
     location: 'Tel Aviv'
