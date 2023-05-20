@@ -7,12 +7,14 @@ import { getAllArticles } from '@/lib/getAllArticles'
 import upgradingAWhiteWallCover from './upgrading-a-white-wall/cover.webp'
 import bauhausStyleDesignCover from './bauhaus-style-design/cover.webp'
 import theListCover from './the-list/cover.webp'
+import teenagersBedroomCover from './teenagers-bedroom/cover.webp'
 
 
 const covers = {
   'upgrading-a-white-wall': upgradingAWhiteWallCover,
   'bauhaus-style-design': bauhausStyleDesignCover,
-  'the-list': theListCover
+  'the-list': theListCover,
+  'teenagers-bedroom': teenagersBedroomCover
 };
 
 function Article({ article }) {
