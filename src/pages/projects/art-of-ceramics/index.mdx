@@ -1,8 +1,9 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { SideBySideLayout } from '@/components/SideBySideLayout';
 import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
-import Image from 'next/image'
+import { ZoomImage as Image } from '@/components/ZoomImage'
 import Link from 'next/link'
+import Zoom from 'react-medium-image-zoom'
 import intro1 from './intro1.webp'
 import intro2 from './intro2.webp'
 import studioDavka1 from './studio-davka-1.webp'
@@ -44,7 +45,9 @@ First, I had to map between the provided space, <b>Shlush 19, Neve Tsedek</b>, a
 
 ## Studio Davka
 
+<Zoom>
 <Image src={studioDavka1} alt="Creating art at Studio Davka" />
+</Zoom>
 
 Studio Davka is the place for the art of ceramics.
 The studio creates functional handcrafted objects to enjoy for everyday use, all hand made locally at the studio.

@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import 'react-medium-image-zoom/dist/styles.css'
 
 function usePrevious(value) {
   let ref = useRef()
