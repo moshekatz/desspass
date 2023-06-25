@@ -362,20 +362,20 @@ export default function Home({ articles }) {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+        {/* <h2 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
           Some personal favorites
-        </h2>
-        <div className="mt-9 mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+        </h2> */}
+        <div className="mt-9 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2">
+            <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/playlist/0JoDPg3BRJy8DWOeMCvwwo?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          {/* <div className="flex flex-col gap-16">
             {articles.sort((a, b) => a.slug === 'the-list' ? -1 : 1).map((article) => (
               <Article key={article.slug} article={article} />
             ))}
-          </div>
+          </div> */}
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> */}
             <Resume />
             <Education />
-            <iframe style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/playlist/0JoDPg3BRJy8DWOeMCvwwo?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
       </Container>
