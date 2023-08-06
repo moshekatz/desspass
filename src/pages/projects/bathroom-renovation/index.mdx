@@ -1,5 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
-import { ThreeColumnLayout } from '@/components/ThreeColumnLayout';
+import { ThreeColumnLayout } from '@/components/ThreeColumnLayout'
 import { ZoomImage as Image } from '@/components/ZoomImage'
 import intro1 from './intro-01.webp'
 import intro2 from './intro-02.webp'
@@ -7,8 +7,8 @@ import intro3 from './intro-03.webp'
 import before1 from './before-01.webp'
 import before2 from './before-02.webp'
 import before3 from './before-03.webp'
+import bathroom from './bathroom.webp'
 import superPosition from './super-position.webp'
-
 
 export const meta = {
   author: 'Linoy Avraham',
@@ -23,9 +23,9 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
 And when life gives you a bathtub leak.. <b>renovate it!</b>
 
 <ThreeColumnLayout>
-  <Image src={intro1} alt="Intro 1"/>
-  <Image src={intro2} alt="Intro 2"/>
-  <Image src={intro3} alt="Intro 3"/>
+  <Image src={intro1} alt="Intro 1" />
+  <Image src={intro2} alt="Intro 2" />
+  <Image src={intro3} alt="Intro 3" />
 </ThreeColumnLayout>
 
 ## The opportunity
@@ -43,15 +43,13 @@ I hope this project will inspire you - happy renovation! (and lemonade... 🍋).
 ### Before
 
 <ThreeColumnLayout>
-  <Image src={before1} alt="Before 1"/>
-  <Image src={before2} alt="Before 2"/>
-  <Image src={before3} alt="Before 3" style={{ width: '90%' }}/>
+  <Image src={before1} alt="Before 1" />
+  <Image src={before2} alt="Before 2" />
+  <Image src={before3} alt="Before 3" style={{ width: '90%' }} />
 </ThreeColumnLayout>
 
 ### The plan
 
-<Image src={superPosition} alt="Super position"/>
+<Image src={bathroom} alt="Bathroom" />
 
-### After
-
-<mark>Coming soon</mark>
+<Image src={superPosition} alt="Super position" />
