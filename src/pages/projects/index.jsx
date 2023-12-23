@@ -7,13 +7,14 @@ import coverTheUrbanJungle from './the-urban-jungle/cover.webp'
 import coverArtOfCeramics from './art-of-ceramics/cover.webp'
 import coverBathroomRenovation from './bathroom-renovation/cover.webp'
 import coverLivingRoomStyling from './living-room-styling/cover.webp'
+import coverBedroom from './bedroom/cover.webp'
 
 const projects = [
   {
-    name: 'Living Room',
-    description: 'Styling',
-    link: { href: '/projects/living-room-styling' },
-    logo: coverLivingRoomStyling,
+    name: 'Ceramics Studio',
+    description: 'Commercial spaces',
+    link: { href: '/projects/art-of-ceramics' },
+    logo: coverArtOfCeramics,
     location: 'Tel Aviv'
   },
   {
@@ -24,19 +25,26 @@ const projects = [
     location: 'Tel Aviv'
   },
   {
-    name: 'Art of Ceramics',
-    description: 'Commercial spaces',
-    link: { href: '/projects/art-of-ceramics' },
-    logo: coverArtOfCeramics,
-    location: 'Tel Aviv'
-  },
-  {
     name: 'Bathroom Renovation',
     description: 'Superposition programs',
     link: { href: '/projects/bathroom-renovation' },
     logo: coverBathroomRenovation,
     location: 'Holon'
-  }
+  },
+  {
+    name: 'Living Room',
+    description: 'Styling',
+    link: { href: '/projects/living-room-styling' },
+    logo: coverLivingRoomStyling,
+    location: 'Tel Aviv'
+  },
+  {
+    name: 'Bedroom',
+    description: 'Bedroom renovation',
+    link: { href: '/projects/bedroom' },
+    logo: coverBedroom,
+    location: 'Tel Aviv'
+  },
 ]
 
 const description = 'Projects I’ve made trying to discover my unique style';
@@ -69,7 +77,7 @@ export default function Projects() {
                   />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link href={project.link.href}/>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <Card.Description>📍 {project.location}</Card.Description>
