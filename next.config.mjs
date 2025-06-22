@@ -9,6 +9,8 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  trailingSlash: false,
+  generateEtags: false,
 }
 
 const withMDX = nextMDX({
