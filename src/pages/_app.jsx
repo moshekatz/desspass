@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -18,8 +19,10 @@ function usePrevious(value) {
   return ref.current
 }
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps }) {
+  let router = useRouter()
   let previousPathname = usePrevious(router.pathname)
+  let isHomePage = router.pathname === '/'
 
   return (
     <>
@@ -29,7 +32,7 @@ export default function App({ Component, pageProps, router }) {
         </div>
       </div>
       <div className="relative">
-        <Header />
+        <Header isHomePage={isHomePage} />
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>

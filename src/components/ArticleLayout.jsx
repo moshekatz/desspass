@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
 import { formatDate } from '@/lib/formatDate'
@@ -24,10 +23,14 @@ export function ArticleLayout({
   isRssFeed = false,
   previousPathname,
 }) {
-  let router = useRouter()
-
   if (isRssFeed) {
     return children
+  }
+
+  function handleGoBack() {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back()
+    }
   }
 
   return (
@@ -42,7 +45,7 @@ export function ArticleLayout({
             {previousPathname && (
               <button
                 type="button"
-                onClick={() => router.back()}
+                onClick={handleGoBack}
                 aria-label="Go back to articles"
                 className="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20 lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0"
               >
