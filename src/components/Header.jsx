@@ -263,6 +263,8 @@ export function Header() {
     }
 
     function updateHeaderStyles() {
+      if (!headerRef.current) return
+
       let { top, height } = headerRef.current.getBoundingClientRect()
       let scrollY = clamp(
         window.scrollY,
@@ -341,7 +343,7 @@ export function Header() {
     window.addEventListener('resize', updateStyles)
 
     return () => {
-      window.removeEventListener('scroll', updateStyles, { passive: true })
+      window.removeEventListener('scroll', updateStyles)
       window.removeEventListener('resize', updateStyles)
     }
   }, [isHomePage])
