@@ -42,7 +42,7 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>Articles - Linoy Avraham</title>
+        <title>Articles - Linoy Katz</title>
         <meta
           name="description"
           content={description}

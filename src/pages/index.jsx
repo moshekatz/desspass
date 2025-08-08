@@ -14,7 +14,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import logoRihutim from '@/images/logos/rihutim.svg'
 import logoBezalel from '@/images/logos/bezalel.png'
-import { generateRssFeed } from '@/lib/generateRssFeed'
+import logoTheBox from '@/images/logos/the-box.png'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -155,14 +155,22 @@ function Newsletter() {
 
 function Resume() {
   let resume = [
+    // {
+    //   company: 'Rihutim',
+    //   href: 'https://rihutim.com',
+    //   title: 'Styling, sketching & sales',
+    //   logo: logoRihutim,
+    //   start: '2021',
+    //   end: '2023',
+    // },
     {
-      company: 'Rihutim',
-      href: 'https://rihutim.com',
+      company: 'The Box',
+      href: 'https://theboxfurniture.co.il',
       title: 'Styling, sketching & sales',
-      logo: logoRihutim,
-      start: '2021',
-      end: '2023',
-    },
+      logo: logoTheBox,
+      start: '2024',
+      end: 'Present',
+    }
   ]
 
   return (
@@ -213,7 +221,7 @@ function Resume() {
       </ol>
       <Button
         download
-        href="/files/linoy-avraham-resume.pdf"
+        href="/files/linoy-katz-resume.pdf"
         target="_blank"
         rel="noopener"
         variant="secondary"
@@ -286,7 +294,7 @@ function Education() {
       </ol>
       <Button
         download
-        href="/files/linoy-avraham-bezalel-diploma.pdf"
+        href="/files/linoy-katz-bezalel-diploma.pdf"
         target="_blank"
         rel="noopener"
         variant="secondary"
@@ -330,7 +338,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>Linoy Avraham - Design, Passion</title>
+        <title>Linoy Katz - Design, Passion</title>
         <meta
           name="description"
           content="I’m Linoy, an interior designer based in Tel Aviv."
@@ -345,7 +353,7 @@ export default function Home({ articles }) {
             Obsessed over details. Passionate to create.
           </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Linoy Avraham, an interior designer based in Tel Aviv.
+            I’m Linoy Katz, an interior designer based in Tel Aviv.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -384,10 +392,6 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
   return {
     props: {
       articles: (await getAllArticles())

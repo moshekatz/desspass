@@ -9,7 +9,7 @@ import avatarImage from '@/images/avatar.jpg'
 import { Button } from '@/components/Button'
 
 const copies = {
-  title: 'About - Linoy Avraham',
+  title: 'About - Linoy Katz',
   heading: 'Hey, I’m Linoy.',
   paragraphs: [
     'A strong appreciation for aesthetics, customer obsession, and an undeniable affinity for art, have always been part of who I am.',
@@ -102,7 +102,7 @@ export default function About() {
                 Connect with me on Linkedin
               </SocialLink>
             </ul>
-            <Button download href="/files/linoy-avraham-resume.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
+            <Button download href="/files/linoy-katz-resume.pdf" target="_blank" rel="noopener noreferrer" variant="secondary" className="group mt-6 w-full">
               Download CV
               <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>

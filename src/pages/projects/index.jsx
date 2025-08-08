@@ -43,7 +43,7 @@ const projects = [
     description: 'Bedroom renovation',
     link: { href: '/projects/bedroom' },
     logo: coverBedroom,
-    location: 'Tel Aviv'
+    location: 'Rishon LeZion'
   },
 ]
 
@@ -54,7 +54,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Linoy Avraham</title>
+        <title>Projects - Linoy Katz</title>
         <meta
           name="description"
           content={description}

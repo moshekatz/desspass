@@ -36,7 +36,7 @@ export function ArticleLayout({
   return (
     <>
       <Head>
-        <title>{`${meta.title} - Linoy Avraham`}</title>
+        <title>{`${meta.title} - Linoy Katz`}</title>
         <meta name="description" content={meta.description} />
       </Head>
       <Container className="mt-16 lg:mt-32">
